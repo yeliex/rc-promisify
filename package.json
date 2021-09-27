@@ -1,0 +1,50 @@
+{
+  "name": "rc-promisify",
+  "version": "0.0.1",
+  "description": "make react-components promisify 🎡",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "es/index.d.ts",
+  "files": [
+    "lib",
+    "es",
+    "src",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf es lib",
+    "build:es": "tsc --target esnext --module esnext --outDir es",
+    "build:lib": "tsc",
+    "build": "npm run build:lib && npm run build:es",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeliex/rc-promisify.git"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "promisify",
+    "suspense"
+  ],
+  "author": "yeliex <yeliex@yeliex.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yeliex/rc-promisify/issues"
+  },
+  "homepage": "https://github.com/yeliex/rc-promisify#readme",
+  "devDependencies": {
+    "@types/node": "^16.10.1",
+    "@types/react": "^17.0.24",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.4.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0"
+  }
+}
