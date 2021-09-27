@@ -1,6 +1,6 @@
 {
   "name": "rc-promisify",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "make react-components promisify 🎡",
   "main": "lib/index.js",
   "module": "es/index.js",
